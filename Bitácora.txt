@@ -1,0 +1,9 @@
+== Ejercicio D4 ==
+1. A qué tamaño se va a ver, en px, en la pantalla más grande que la muestre. Con ese número, ¿qué LADO_MAX eligen?
+En nuestro caso, las impágenes serán utilizadas para que el padre vea que todo está en orden y que pueda descargar las fotos que le gusten. No es un uso técnico o de alta demanda de calidad de imagen, aunque tampoco es un ícono pequeño. En cambio, el socio formador nos informó que a algunos padres no les gusta tener aplicaciones que tomen mucha batería o memoria. Por ende un LADO_MAX de 1,280 px suena razonable.
+
+2. Quién puede ver esa imagen: ¿cualquiera con sesión, solo su dueño, o cualquiera aunque no tenga cuenta? ¿Qué cambiaría en GET /imagenes/{clave}?
+En nuestro reto, sólo el maestro que la tomó y el padre en cuestión. El GET se complicaría pues habría que checar qué personas tienen el permiso de ver cada foto.
+
+3. Qué pasa con una imagen que se subió pero cuyo aviso nunca se publicó (el usuario se arrepintió después del 201 de la imagen). ¿Quién la borra?
+No se borra.
