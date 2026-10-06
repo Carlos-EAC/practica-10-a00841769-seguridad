@@ -54,6 +54,7 @@ fun PublicarScreen(
     onPublicar: () -> Unit,
     onCancelar: () -> Unit,
     onGaleria: () -> Unit,
+    onCamara: () -> Unit,
     onQuitarImagen: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -117,6 +118,11 @@ fun PublicarScreen(
                     Spacer(Modifier.width(espaciado.sm))
                     Text("Galería")
                 }
+                OutlinedButton(onClick = onCamara, enabled = !uiState.enviando) {
+                    Icon(painterResource(R.drawable.ic_camara), contentDescription = null, modifier = Modifier.size(18.dp))
+                    Spacer(Modifier.width(espaciado.sm))
+                    Text("Cámara")
+                }
                 if (uiState.imagen != null) {
                     TextButton(onClick = onQuitarImagen, enabled = !uiState.enviando) { Text("Quitar") }
                 }
@@ -158,7 +164,7 @@ private fun PublicarPreview() {
             ),
             autor = "profe.prueba",
             onTituloChange = {}, onCuerpoChange = {}, onPublicar = {}, onCancelar = {},
-            onGaleria = {}, onQuitarImagen = {}
+            onGaleria = {}, onQuitarImagen = {}, onCamara = {}
         )
     }
 }
